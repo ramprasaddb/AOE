@@ -1,0 +1,173 @@
+<form [formGroup]="reactiveForm" >
+    <table class="main">
+    <tr >
+    <td class="regionUserDetails">
+        <table>
+            <tr>
+                <td>
+                    <img src={{logoPath}}/>
+                </td>
+                <td>
+                    <label for="heading">Ministry of Health <br>
+                        and Long-Term Care <br>
+                        Laboratory Requisition<br>
+                        Requistioning Clinician / Practitioner</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea class="name" id="name" name="name" formControlName="name"></textarea><br>
+                    
+                    <textarea class="address"  id="address" name="address" formControlName="address"></textarea>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>       
+    </td>
+    <td class="regionLab">
+        <label for="laboratoryUseOnly" class="labUse">Laboratory Use Only </label>
+    </td>
+    </tr>
+    <tr >
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <label for="practitionerNumber">Clinical/Practitioner Number </label>
+                </td>
+                <td>
+                    <label for="registrationNumber">CPSC/Registration Number </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="practitionerNumber" class="editableFields" name="practitionerNumber" formControlName="practitionerNumber">
+                </td>
+                <td>
+                    <input type="text" id="registrationNumber" class="editableFields" name="registrationNumber" formControlName="registrationNumber">
+                </td>
+            </tr>
+        </table>
+    </td>
+    <td>
+        <table class="PractinerDetails">
+            <tr>
+                <td>
+                    <label for="practitionerContactNumber">Practitioner's Contact Number for Urgent </label>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="column-span: 4;">
+                                <label for="serviceDate">Service Date</label>
+                            </td>
+                           </tr>
+                            <tr>
+                            <td>
+                                <label>yyyy</label>
+                            </td>
+                            <td>
+                                <label>mm</label>
+                            </td>
+                            <td>
+                                <label>dd</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>{{seviceYear}}</label>
+                            </td>
+                            <td>
+                                <label>{{serviceMonth}}</label>
+                            </td>
+                            <td>
+                                <label>{{serviceDay}}</label>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="practitionerContactNumber" class="practitionerInfo" name="practitionerContactNumber" formControlName="practitionerContactNumber">
+                </td>
+                <td>
+                    <label id="serviceDate" class="servDate" name="serviceDate" formControlName="serviceDate"></label>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr> 
+    <tr style="border-style: solid;">
+        <td style="border-style: solid;">
+        <label for="ohipInfo">Check (✓) area:</label><br>
+        <input type="text" id="ohipInfo" class="editableFields" name="ohipInfo" formControlName="ohipInfo">
+    </td>
+    <td>
+        <table>
+            <tr>
+                <td>
+                    <label for="healthNo" >Health Number</label><br>
+                    <input type="text" id="healthNo" class="editableFields" name="healthNo" formControlName="healthNo">
+                </td>
+                <td>
+                    <label for="versionType">Version</label><br>
+                     <input type="text" id="versionType" class="minVals" name="versionType" formControlName="versionType">
+                </td>
+                <td>
+                    <label for="sex">Sex</label><br>
+                    <input type="text" id="sex" class="minVals" name="sex" formControlName="sex">
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="column-span: 4;">
+                                <label for="dateOfBirth">Date Of Birth</label>
+                            </td>
+                           </tr>
+                            <tr>
+                            <td>
+                                <label>yyyy</label>
+                            </td>
+                            <td>
+                                <label>mm</label>
+                            </td>
+                            <td>
+                                <label>dd</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="dobYear" class="minVals" name="dobYear" formControlName="dobYear">
+                            </td>
+                            <td>
+                                <input type="text" id="dobMonth" class="minVals" name="dobMonth" formControlName="dobMonth">
+                            </td>
+                            <td>
+                                <input type="text" id="dobDay" class="minVals" name="dobDay" formControlName="dobDay">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr>
+    <tr style="border-style: solid; width: fit-content;">
+        <td  >
+            <label id="additionalInfo">
+                Additional Clinical information (e.g, diagnosis)
+            </label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+        </td>
+    </tr>
+    </table>
+    <button>Submit</button>
+   </form>
